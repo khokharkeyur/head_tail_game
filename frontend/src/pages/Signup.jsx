@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { useNavigate } from "react-router-dom";
@@ -39,7 +38,7 @@ const Signup = () => {
   });
 
   return (
-    <div className="lg:w-1/4 mx-2 backdrop-blur-xl bg-white/10 p-10 rounded-xl shadow-xl border border-white/20">
+    <div className="lg:w-1/3 mx-2 backdrop-blur-xl bg-white/10 p-10 rounded-xl shadow-xl border border-white/20">
       <h2 className="text-2xl font-semibold text-center mb-6">Sign Up</h2>
 
       <form onSubmit={formik.handleSubmit}>

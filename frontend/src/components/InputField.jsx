@@ -7,6 +7,7 @@ const InputField = ({ label, type, name, formik }) => {
       <input
         type={type}
         name={name}
+        id={name}
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values[name]}

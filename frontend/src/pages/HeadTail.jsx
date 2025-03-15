@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 const HeadTail = () => {
@@ -10,7 +11,10 @@ const HeadTail = () => {
   };
 
   const handleSubmit = () => {
-    if (!selectedValue) return;
+    if (!selectedValue) {
+      toast.error("Please select a value from the dropdown");
+      return;
+    }
 
     const newResult = [...result];
     const lastRow = newResult[newResult.length - 1];
@@ -56,6 +60,7 @@ const HeadTail = () => {
           value={selectedValue}
           onChange={handleSelectChange}
           className="px-4 py-2 rounded-lg bg-white text-gray-800"
+          placeholder="Select value"
         >
           <option value="">Select value</option>
           <option value="H">H</option>
