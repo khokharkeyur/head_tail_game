@@ -1,5 +1,5 @@
-import mongoose from "mongoose";
-import { MONGO_URI } from "./helper.js";
+const mongoose = require("mongoose");
+const { MONGO_URI } = require("./helper.js");
 
 const connectDB = async () => {
   try {
@@ -14,4 +14,4 @@ const connectDB = async () => {
   }
 };
 
-export default connectDB;
+module.exports = connectDB;
